@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    transition: .3s;
+    text-decoration: none;
+    color: #a2a2a2;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande' 
+}
+body::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #111111f3;
+    z-index: -1;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+
+nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+}
+
+nav.navbar .logo img {
+    width: 50px;
+}
+
+nav.navbar .left {
+    display: flex;
+    align-items: center;
+}
+
+nav.navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav.navbar ul a {
+    display: block;
+    padding: 10px 35px;
+    text-transform: uppercase;
+    animation: FadeIn 1s linear forwards;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav.navbar a:hover {
+    color: rgb(208, 4, 4);
+}
+
+nav.navbar ul a.active {
+    color: rgb(208, 4, 4);
+}
+
+nav.navbar .right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav.navbar .right a {
+    color: #a2a2a2;
+}
+
+nav.navbar .right a:hover {
+    color: rgb(208, 4, 4);
+}
+
+.content {
+    margin-top: 4rem;
+    animation: FadeIn 1s linear forwards;
+}
+
+.content .title {
+    width: 80%;
+}
+
+.content .paragraph {
+    width: 80%;
+    margin-top: 1rem;
+}
+
+.content .companies {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.content .companies img {
+    width: fit-content;
+    height: 30px;
+}
+
+.content .buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.content .buttons a {
+    display: block;
+    padding: 15px 4%;
+    margin-right: 3rem;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    transform: skew(-8deg);
+}
+
+.content .buttons a.trailer {
+    border: 2px solid red;
+}
+
+.content .buttons a.trailer:hover {
+    background: red;
+}
+
+.content .buttons a.preorder {
+    background: rgb(208, 4, 4);
+}
+
+.content .buttons a.preorder:hover {
+    background: rgb(245, 13, 13);
+}
+
+.content .character {
+    position: absolute;
+    width: 100%;
+    right: -20%;
+    top: 0;
+    animation: FadeIn 1s linear forwards;
+}
+
+@keyframes FadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+.card .bs {
+    transition: all .5s;
+}
+
+.card .bs:hover {
+    box-shadow: 1px 1px 14px 0 #fff;
+    transform: translateY(-10px) scale(1.1);
+}
